@@ -37,6 +37,9 @@ const corona = props => {
 
       <div id="container" className="container">
         <div style={{width: '100%', height: '70px'}}></div>
+        <div className="font-weight-bold">
+          * 해당 코로나19 통계는 질병관리본부에서 발표하는 데이터를 활용하여 제공합니다.
+        </div>
         <div className="col-12 col-lg-8 p-0">
           <div className="table-title">
             코로나19 지역별 통계

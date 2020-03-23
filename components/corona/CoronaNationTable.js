@@ -4,7 +4,6 @@ const CoronaNationTable = props => {
     nation
   } = props.data;
 
-  console.log(props)
   return (
     <>
       <table className="table text-center col-12">

@@ -1,21 +1,36 @@
 import { useEffect } from 'react'
 import Frame from '../components/Frame';
+import fetch from 'isomorphic-unfetch'
+import KakaoMap from '../components/index/KakaoMap';
 
-const Home = () => {
-  useEffect(() => {		
-		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-		var options = { //지도를 생성할 때 필요한 기본 옵션
-			center: new window.kakao.maps.LatLng(37.5667438, 126.9825913), //지도의 중심좌표.
-      level: 6 //지도의 레벨(확대, 축소 정도),
-    };
-    
-    container.style.height = window.innerHeight + 'px';
+const Index = () => {
+  let currentMarkers = [];
+  let currentMarker = null;
+  let currentInfoWindow = null;
+  let currentOverlay = null;
 
-    var map = new window.kakao.maps.Map(container, options); // 지도를 생성합니다
-    
-  }, []);
+  const dragHandler = map => {     
+    // const latlng = map.getCenter(); 
 
+    // if (currentOverlay != null) {
+    //   currentOverlay.setMap(null);
+    // }
     
+    // fetchCoords(latlng.getLat().toFixed(7), latlng.getLng().toFixed(7));
+  }
+  
+  const fetchCoords = async(lat, lng) => {
+    const isDebug = false;
+
+    const local = 'http://localhost:8080';
+    const prod = 'http://www.thereright.co.kr:8080/';
+  
+    const baseURL = isDebug ? local : prod;
+  
+    const resCurr = await fetch(baseURL + '/search?lat=' + lat + '&lng=' + lng);
+    const curr = await resCurr.json();
+  }
+
   //   $(window).resize(function(e) {
   //     $('#wrapper').height(window.innerHeight + 'px');
   //     $('#map').height(window.innerHeight + 'px');
@@ -23,9 +38,19 @@ const Home = () => {
 
   return (
     <Frame>
-      <div id="map"></div>
+      <KakaoMap 
+        dragHandler={dragHandler}
+      />
+
+      {/* <div id="map" dragHandler={}></div> */}
     </Frame>
   );
 };
 
-export default Home;
+// Index.getInitialProps = async (context) => {
+//   return {
+    
+//   }
+// }
+
+export default Index;

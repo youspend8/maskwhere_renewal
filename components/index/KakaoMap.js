@@ -24,11 +24,17 @@ const KakaoMap = props => {
     const isDebug = false;
 
     const local = 'http://localhost:8080';
-    const prod = 'https://www.thereright.co.kr/before';
+    const prod = 'http://www.thereright.co.kr:8080';
   
     const baseURL = isDebug ? local : prod;
   
-    const response = await fetch(baseURL + '/search?lat=' + lat + '&lng=' + lng);
+    const response = await fetch(baseURL + '/search?lat=' + lat + '&lng=' + lng, {
+      headers: {
+        Origin: 'http://localhost:8000',
+        Referer: 'http://localhost:8000'
+      },
+      referrer: 'http://www.thereright.co.kr'
+    });
     const result = await response.json();
 
     const stores = result.stores;

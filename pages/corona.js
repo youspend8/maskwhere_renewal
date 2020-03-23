@@ -79,7 +79,7 @@ const corona = props => {
 };
 
 corona.getInitialProps = async ({ query }) => {
-  const isDebug = true;
+  const isDebug = false;
 
   const local = 'http://localhost:8080';
   const prod = 'https://www.thereright.co.kr/api';

@@ -28,7 +28,7 @@ const KakaoMap = props => {
   
     const baseURL = isDebug ? local : prod;
   
-    const response = await fetch(baseURL + '/search?lat=' + lat + '&lng=' + lng, {
+    const response = await fetch(baseURL + '/mask/search?lat=' + lat + '&lng=' + lng, {
       headers: {
         Origin: 'http://localhost:8000',
         Referer: 'http://localhost:8000'

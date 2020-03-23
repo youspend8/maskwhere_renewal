@@ -3,8 +3,14 @@ import Sidebar from './Sidebar';
 import { sidebarOpen } from './Sidebar';
 import Footer from './Footer';
 import Modal from './Modal';
+import Router from 'next/router';
+import { useEffect } from 'react';
 
 export default function Frame({ children }) {
+  useEffect(() => {
+    $('#wrapper').height(window.innerHeight + 'px');
+  }, []);
+
   return (
     <div>
       <Header />
@@ -25,9 +31,11 @@ export default function Frame({ children }) {
 
       <Sidebar />
 
+      <div id="wrapper" className="wrapper" style={{overflowY: 'scroll'}}>
       {
         children
       }
+      </div>
       
       <Footer />
       

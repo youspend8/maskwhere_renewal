@@ -16,7 +16,7 @@ export default function Sidebar() {
           </a>
         </li>
         <li className="sidebar-item item-dep2">
-          <a className="sidebar-link" onClick={() => Router.push('/corona/')}>
+          <a className="sidebar-link" onClick={() => Router.push('/corona')}>
             <i className="material-icons pr-3">bar_chart</i>
             코로나19 현황
           </a>

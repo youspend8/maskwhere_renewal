@@ -10,20 +10,20 @@ const Index = () => {
   let currentOverlay = null;
 
   const dragHandler = map => {     
-    // const latlng = map.getCenter(); 
+    const latlng = map.getCenter(); 
 
-    // if (currentOverlay != null) {
-    //   currentOverlay.setMap(null);
-    // }
+    if (currentOverlay != null) {
+      currentOverlay.setMap(null);
+    }
     
-    // fetchCoords(latlng.getLat().toFixed(7), latlng.getLng().toFixed(7));
+    fetchCoords(latlng.getLat().toFixed(7), latlng.getLng().toFixed(7));
   }
   
   const fetchCoords = async(lat, lng) => {
     const isDebug = false;
 
     const local = 'http://localhost:8080';
-    const prod = 'http://www.thereright.co.kr:8080/';
+    const prod = 'http://www.thereright.co.kr:8080';
   
     const baseURL = isDebug ? local : prod;
   

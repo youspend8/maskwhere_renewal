@@ -18,18 +18,6 @@ const Index = () => {
     
     fetchCoords(latlng.getLat().toFixed(7), latlng.getLng().toFixed(7));
   }
-  
-  const fetchCoords = async(lat, lng) => {
-    const isDebug = false;
-
-    const local = 'http://localhost:8080';
-    const prod = 'https://www.thereright.co.kr/before';
-  
-    const baseURL = isDebug ? local : prod;
-  
-    const resCurr = await fetch(baseURL + '/search?lat=' + lat + '&lng=' + lng);
-    const curr = await resCurr.json();
-  }
 
   //   $(window).resize(function(e) {
   //     $('#wrapper').height(window.innerHeight + 'px');

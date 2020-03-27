@@ -1,12 +1,8 @@
 import Frame from "../components/Frame";
 import { withRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch'
-import { useRef, useEffect } from "react";
 import CoronaRegionChart from '../components/charts/CoronaRegionChart';
 import CoronaFlowChart from "../components/charts/CoronaFlowChart";
-import {
-  locationMap
-} from '../constants/Common';
 import CoronaNationTable from "../components/corona/CoronaNationTable";
 import CoronaRegionTable from "../components/corona/CoronaRegionTable";
 
@@ -33,6 +29,11 @@ const corona = props => {
           margin-top: 20px;
           margin-bottom: 20px;
         }
+
+        @media
+        #stat_area {
+
+        }
       `}</style>
 
       <div id="container" className="container">
@@ -40,7 +41,7 @@ const corona = props => {
         <div className="font-weight-bold">
           * 해당 코로나19 통계는 질병관리본부에서 발표하는 데이터를 활용하여 제공합니다.
         </div>
-        <div className="col-12 col-lg-8 p-0">
+        <div className="col-12 col-lg-8 p-0" id="stat_area" style={{fontSize: '12px'}}>
           <div className="table-title">
             코로나19 지역별 통계
           </div>

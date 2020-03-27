@@ -19,18 +19,18 @@ const Index = () => {
     fetchCoords(latlng.getLat().toFixed(7), latlng.getLng().toFixed(7));
   }
 
-  //   $(window).resize(function(e) {
-  //     $('#wrapper').height(window.innerHeight + 'px');
-  //     $('#map').height(window.innerHeight + 'px');
-  //   });
+  useEffect(() => {
+    $(window).resize(function(e) {
+      $('#wrapper').height(window.innerHeight + 'px');
+      $('#map').height(window.innerHeight + 'px');
+    });
+  });
 
   return (
     <Frame>
       <KakaoMap 
         dragHandler={dragHandler}
       />
-
-      {/* <div id="map" dragHandler={}></div> */}
     </Frame>
   );
 };

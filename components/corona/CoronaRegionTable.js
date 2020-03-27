@@ -22,9 +22,10 @@ const CoronaRegionTable = props => {
         <thead>
           <tr className="font-weight-bold">
             <th className="">지역</th>
-            <th className="">확진자 : </th>
+            <th className="">확진자</th>
             <th className="">격리해제</th>
             <th className="">사망자</th>
+            <th className="">완치율</th>
             <th className="">발생률</th>
           </tr>
         </thead>
@@ -45,6 +46,7 @@ const CoronaRegionTable = props => {
                   </td>
                   <td>{release[item].toLocaleString()}</td>
                   <td>{died[item].toLocaleString()}</td>
+                  <td>{(Number.parseFloat(release[item]) / Number.parseInt(curr[item]) * 100).toFixed(1) + '%'}</td>
                   <td>{rate[item].toLocaleString()}</td>
                 </tr>
               );

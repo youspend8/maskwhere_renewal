@@ -55,42 +55,42 @@ const KakaoMap = props => {
 
       let imageSrc = '';
 						
-      let iwContent = '<div class="wrap">' + 
-      '    <div class="info">' + 
-      '        <div class="title">' +
+      let iwContent = '<div className="wrap">' + 
+      '    <div className="info">' + 
+      '        <div className="title">' +
                   positions.name + 
       '        </div>' + 
-        '        <div class="d-flex flex-wrap p-2" style="height: 141px;">' + 
-        '            <div class="addr">' + positions.addr + '</div>';
+        '        <div className="d-flex flex-wrap p-2" style="height: 141px;">' + 
+        '            <div className="addr">' + positions.addr + '</div>';
         
       if (positions.remain_stat == 'plenty') {
         imageSrc = plentySrc;
-        iwContent += '<div class="ellipsis text-success">' + '재고 100개 이상' + '</div>';
+        iwContent += '<div className="ellipsis text-success">' + '재고 100개 이상' + '</div>';
       } else if (positions.remain_stat == 'some') {
         imageSrc = someSrc;
-        iwContent += '<div class="ellipsis text-warning">' + '재고 30개 ~ 100개' + '</div>';
+        iwContent += '<div className="ellipsis text-warning">' + '재고 30개 ~ 100개' + '</div>';
       } else if (positions.remain_stat == 'few') {
         imageSrc = fewSrc;
-        iwContent += '<div class="ellipsis text-danger">' + '재고 2개 ~ 30개' + '</div>';
+        iwContent += '<div className="ellipsis text-danger">' + '재고 2개 ~ 30개' + '</div>';
       } else if (positions.remain_stat == 'empty') {
         imageSrc = emptySrc;
-        iwContent += '<div class="ellipsis text-secondary">' + '재고 1개 이하' + '</div>';
+        iwContent += '<div className="ellipsis text-secondary">' + '재고 1개 이하' + '</div>';
       } else if (positions.remain_stat == 'break') {
         imageSrc = emptySrc;
-        iwContent += '<div class="ellipsis text-secondary">' + '판매중지' + '</div>';
+        iwContent += '<div className="ellipsis text-secondary">' + '판매중지' + '</div>';
       } else if (positions.remain_stat == null) {
         imageSrc = emptySrc;
-        iwContent += '<div class="ellipsis text-secondary">' + '재고정보 없음' + '</div>';
+        iwContent += '<div className="ellipsis text-secondary">' + '재고정보 없음' + '</div>';
       }
 
       if (positions.created_at == null) {
-        iwContent +='			<div class="ellipsis text-dark w-100">갱신시간 : ' + '정보없음' + '</div>';
+        iwContent +='			<div className="ellipsis text-dark w-100">갱신시간 : ' + '정보없음' + '</div>';
       } else {
-        iwContent +='			<div class="ellipsis text-dark w-100">갱신시간 : ' + positions.created_at + '</div>';
+        iwContent +='			<div className="ellipsis text-dark w-100">갱신시간 : ' + positions.created_at + '</div>';
       }
-      iwContent +='			<div class="d-flex justify-content-between align-self-end col-12 mt-2">' + 
-            '				<a class="btn btn-dark col-6 p-1" href="https://map.kakao.com/link/to/' + positions.name + ',' + lat + ',' + lng + '" target="_blank" style="margin-right: 5px; margin-left: -2.5px; font-size: 15px;">길찾기</a>' +
-            '				<a class="btn btn-dark col-6 p-1" href="https://map.kakao.com/link/map/' + positions.name + ',' + lat + ',' + lng + '" target="_blank" style="font-size: 15px;">크게보기</a>' + 
+      iwContent +='			<div className="d-flex justify-content-between align-self-end col-12 mt-2">' + 
+            '				<a className="btn btn-dark col-6 p-1" href="https://map.kakao.com/link/to/' + positions.name + ',' + lat + ',' + lng + '" target="_blank" style="margin-right: 5px; margin-left: -2.5px; font-size: 15px;">길찾기</a>' +
+            '				<a className="btn btn-dark col-6 p-1" href="https://map.kakao.com/link/map/' + positions.name + ',' + lat + ',' + lng + '" target="_blank" style="font-size: 15px;">크게보기</a>' + 
             '			</div>' + 
             '        </div>' + 
             '    </div>' +    
@@ -323,8 +323,8 @@ const KakaoMap = props => {
 
       <div id="map" ref={container}></div>
       
-      <button type="button" id="my_location" onClick={myLocationClickHandler} className="overlay-btn btn btn-dark" style={{bottom: '7%', right: '5%'}}>
-        <i class="material-icons">my_location</i>
+      <button type="button" id="my_location" onClick={myLocationClickHandler} className="overlay-btn btn btn-dark" style={{bottom: '70px', right: '50px'}}>
+        <i className="material-icons">my_location</i>
       </button>
       
       <select id="quick_panto" className="form-control text-white bg-dark" onClick={quickPantoChangeHandler}>

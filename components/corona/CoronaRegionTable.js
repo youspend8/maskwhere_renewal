@@ -39,7 +39,7 @@ const CoronaRegionTable = props => {
                 }>
                   <td>{locationMap[item].toLocaleString()}</td>
                   <td>
-                    {curr[item].toLocaleString()}&nbsp;(
+                    {curr[item].toLocaleString()}<br/>(
                     <label className="m-0 text-danger">+ 
                       {diff[item].toLocaleString()}
                     </label>)

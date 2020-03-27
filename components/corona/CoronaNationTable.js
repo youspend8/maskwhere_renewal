@@ -27,7 +27,7 @@ const CoronaNationTable = props => {
                 <td>{index + 1}</td>
                 <td>{item.nation}</td>
                 <td>
-                  {item.infection.toLocaleString()}&nbsp;(
+                  {item.infection.toLocaleString()}<br/>(
                   <label className="m-0 text-danger">+ 
                     {
                       typeof item.increase == 'object' ? item.increase : item.increase.toLocaleString()

@@ -20,12 +20,12 @@ export default function Header() {
         <title>마스크거기 - thereright</title>
 	      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta property="og:title" content="마스크 거기" />
-        <meta property="og:description" content="마스크 관련 공공데이터를 이용한 판매처 및 재고현황과 코로나19 통계 데이터를 제공하는 서비스입니다." />
+        <meta property="og:title" content="마스크 거기 - 공공마스크 정보" />
+        <meta property="og:description" content="공공마스크 관련 공공데이터를 이용한 공적마스크 판매처 및 재고현황과 코로나19 통계 데이터를 제공하는 서비스입니다." />
         <meta property="og:url" content="https://www.thereright.co.kr" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="" />
-        <meta name="description" content="공공데이터를 활용한 마스크 판매처 및 재고 현황과 코로나19 통계 데이터를 제공하는 서비스입니다." />
+        <meta name="description" content="공공데이터를 활용한 공공마스크 판매처 및 공적마스크 재고 현황과 코로나19 통계 데이터를 제공하는 서비스입니다." />
         <meta name="naver-site-verification" content="35d9bc3262f8f9b45b902fb875586a9a965099dd"/>
         <meta name="google-site-verification" content="0EJP9jEvzKPlfbRC0y57xWXrAIVIWJ69yR9m1MyUXe8" />
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe3820d4a415ead65c11b74b1392d151&libraries=services"></script>

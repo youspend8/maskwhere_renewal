@@ -37,17 +37,17 @@ const CoronaRegionTable = props => {
                 <tr key={index} className={
                   item === 'total' ? 'bg-dark text-white font-weight-bold' : ''
                 }>
-                  <td>{locationMap[item].toLocaleString()}</td>
-                  <td>
+                  <td className="align-middle">{locationMap[item].toLocaleString()}</td>
+                  <td className="align-middle">
                     {curr[item].toLocaleString()}<br/>(
                     <label className="m-0 text-danger">+ 
                       {diff[item].toLocaleString()}
                     </label>)
                   </td>
-                  <td>{release[item].toLocaleString()}</td>
-                  <td>{died[item].toLocaleString()}</td>
-                  <td>{(Number.parseFloat(release[item]) / Number.parseInt(curr[item]) * 100).toFixed(1) + '%'}</td>
-                  <td>{rate[item].toLocaleString()}</td>
+                  <td className="align-middle">{release[item].toLocaleString()}</td>
+                  <td className="align-middle">{died[item].toLocaleString()}</td>
+                  <td className="align-middle">{(Number.parseFloat(release[item]) / Number.parseInt(curr[item]) * 100).toFixed(1) + '%'}</td>
+                  <td className="align-middle">{rate[item].toLocaleString()}</td>
                 </tr>
               );
             }

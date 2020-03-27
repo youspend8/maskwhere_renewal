@@ -24,9 +24,9 @@ const CoronaNationTable = props => {
               <tr key={index} className={
                 item.nation === '합계' ? 'bg-dark text-white font-weight-bold' : ''
               }>
-                <td>{index + 1}</td>
-                <td>{item.nation}</td>
-                <td>
+                <td className="align-middle">{index + 1}</td>
+                <td className="align-middle">{item.nation}</td>
+                <td className="align-middle">
                   {item.infection.toLocaleString()}<br/>(
                   <label className="m-0 text-danger">+ 
                     {
@@ -34,8 +34,8 @@ const CoronaNationTable = props => {
                     }
                   </label>)
                 </td>
-                <td>{item.die.toLocaleString()}</td>
-                <td>
+                <td className="align-middle">{item.die.toLocaleString()}</td>
+                <td className="align-middle">
                 {
                   (item.infection / item.die == 'Infinity') ? 0 : (item.die / item.infection * 100).toFixed(2)
                 }

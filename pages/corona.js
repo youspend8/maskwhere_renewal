@@ -29,11 +29,6 @@ const corona = props => {
           margin-top: 20px;
           margin-bottom: 20px;
         }
-
-        @media
-        #stat_area {
-
-        }
       `}</style>
 
       <div id="container" className="container">

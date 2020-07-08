@@ -78,7 +78,7 @@ corona.getInitialProps = async ({ query }) => {
   const isDebug = false;
 
   const local = 'http://localhost:8080';
-  const prod = 'https://www.thereright.co.kr/api';
+  const prod = 'https://mask.thereright.co.kr/api';
 
   const baseURL = isDebug ? local : prod;
 

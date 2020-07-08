@@ -22,7 +22,7 @@ export default function Header() {
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta property="og:title" content="마스크 거기 - 공공마스크 정보" />
         <meta property="og:description" content="공공마스크 관련 공공데이터를 이용한 공적마스크 판매처 및 재고현황과 코로나19 통계 데이터를 제공하는 서비스입니다." />
-        <meta property="og:url" content="https://www.thereright.co.kr" />
+        <meta property="og:url" content="https://mask.thereright.co.kr" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="" />
         <meta name="description" content="공공데이터를 활용한 공공마스크 판매처 및 공적마스크 재고 현황과 코로나19 통계 데이터를 제공하는 서비스입니다." />

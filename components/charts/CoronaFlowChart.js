@@ -88,14 +88,14 @@ const CoronaFlowChart = props => {
       vAxes: {
         0: {
           viewWindow: {
-            max: 0,
-            min: 10000
+            max: 5000,
+            min: 15000
           }
         },
         1: {
           viewWindow: {
-            max: 0,
-            min: 10000
+            max: 5000,
+            min: 15000
           }
         }
       },
